@@ -15,7 +15,7 @@ export const Wheels = () => {
     let html = "<ul>"
 
     const listItemsArray = wheel.map(wheel => {
-        return `<li><input type="radio" name="wheel" value="${wheel.id}"/> ${wheel.color}
+        return `<li><input type="radio" name="wheel" value="${wheel.id}"/> ${wheel.color} ${wheel.type}
         </li>`
     })
     

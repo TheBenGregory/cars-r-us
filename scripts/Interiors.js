@@ -15,7 +15,8 @@ export const Interiors = () => {
     let html = "<ul>"
 
     const listItemsArray = interior.map(interior => {
-        return `<li><input type="radio" name="interior" value="${interior.id}"/> ${interior.color}
+        return `<li><input type="radio" name="interior" value="${interior.id}"/> ${interior.color} ${interior.type}
+    
         </li>`
     })
     
