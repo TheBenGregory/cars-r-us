@@ -21,7 +21,7 @@ const database = {
         isLeather: false
     }
     ],
-    paintColor: [
+    paintColors: [
         {
         id: 1,
         color: "Silver",
