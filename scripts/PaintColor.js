@@ -3,7 +3,7 @@ import { getPaintColors, setPaintColor } from "./database.js";
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "paint") {
+        if (event.target.name === "color") {
             setPaintColor(parseInt(event.target.value))
         }
     }
