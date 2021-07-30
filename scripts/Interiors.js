@@ -11,6 +11,17 @@ document.addEventListener(
 
 export const interior = getInteriors()
 
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "interior") 
+                
+//         {
+//             window.alert(`Customer selected interior ${event.target.value}`)
+//         }
+//     }
+// )
+
 export const Interiors = () => {
     let html = "<ul>"
 

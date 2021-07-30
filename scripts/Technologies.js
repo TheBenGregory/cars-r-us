@@ -8,14 +8,23 @@ document.addEventListener(
         }
     }
 )
-
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "technology") 
+                
+//         {
+//             window.alert(`Customer selected tech package ${event.target.value}`)
+//         }
+//     }
+// )
 export const tech = getTechnologies()
 
 export const Technologies = () => {
     let html = "<ul>"
 
     const listItemsArray = tech.map(tech => {
-        return `<li><input type="radio" name="color" value="${tech.id}"/> ${tech.type}
+        return `<li><input type="radio" name="technology" value="${tech.id}"/> ${tech.type}
         </li>`
     })
     
