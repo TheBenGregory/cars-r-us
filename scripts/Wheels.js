@@ -9,6 +9,17 @@ document.addEventListener(
     }
 )
 
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "wheel") 
+                
+//         {
+//             window.alert(`Customer selected wheel ${event.target.value}`)
+//         }
+//     }
+// )
+
 export const wheel = getWheels()
 
 export const Wheels = () => {

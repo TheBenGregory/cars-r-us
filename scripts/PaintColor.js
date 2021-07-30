@@ -8,7 +8,16 @@ document.addEventListener(
         }
     }
 )
-
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "color") 
+                
+//         {
+//             window.alert(`Customer selected color ${event.target.value}`)
+//         }
+//     }
+// )
 export const color = getPaintColors()
 
 export const PaintColor = () => {
