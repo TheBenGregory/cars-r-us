@@ -1,10 +1,10 @@
-import { getInteriors, getTechnologies, getPaintColors, getWheels, getCustomOrders  } from "./database.js";
+import { getInteriors, getTechs, getPaintColors, getWheels, getCustomOrders  } from "./database.js";
 
 
 
 const interiors = getInteriors()
-const technologies = getTechnologies()
-const colors = getPaintColors()
+const techs = getTechs()
+const paintColors = getPaintColors()
 const wheels = getWheels()
 
 const buildOrderListItem = (order) => {
@@ -17,16 +17,16 @@ const buildOrderListItem = (order) => {
         }
     )
 
-    const selectedTechnologies = technologies.find(
+    const selectedTechs = techs.find(
         (tech) => {
             return tech.id === order.techId
 
         }
     )
 
-    const selectedPaintColors = colors.find(
-        (color) => {
-            return color.id === order.colorId
+    const selectedPaintColors = paintColors.find(
+        (paintColor) => {
+            return paintColor.id === order.paintColorId
 
         }
     )
@@ -35,9 +35,9 @@ const buildOrderListItem = (order) => {
             return wheel.id === order.wheelId
 
         }
-    )
+    )    
 
-    const totalCost = selectedInteriors.price + selectedTechnologies.price + selectedPaintColors.price + selectedWheels
+    const totalCost = selectedInteriors.price + selectedTechs.price + selectedPaintColors.price + selectedWheels.price
 
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",

@@ -3,7 +3,7 @@ import { getPaintColors, setPaintColor } from "./database.js";
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "color") {
+        if (event.target.name === "paintColor") {
             setPaintColor(parseInt(event.target.value))
         }
     }
@@ -18,13 +18,13 @@ document.addEventListener(
 //         }
 //     }
 // )
-export const color = getPaintColors()
+const paintColors = getPaintColors()
 
 export const PaintColor = () => {
     let html = "<ul>"
 
-    const listItemsArray = color.map(color => {
-        return `<li><input type="radio" name="color" value="${color.id}"/> ${color.color}
+    const listItemsArray = paintColors.map(paintColor => {
+        return `<li><input type="radio" name="paintColor" value="${paintColor.id}"/> ${paintColor.color}
         </li>`
     })
     
