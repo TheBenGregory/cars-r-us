@@ -1,5 +1,6 @@
 const database = {
     orderBuilder: {
+        
 
     },
     wheels: [
@@ -7,83 +8,100 @@ const database = {
             id: 1,
             type: "Spoke",
             size: 18,
-            color: "Black"
+            color: "Black",
+            price: 400,
         },
         {
             id: 2,
             type: "Spoke",
             size: 18,
-            color: "Silver"
+            color: "Silver",
+            price: 400,
         },
         {
             id: 3,
             type: "Radial",
             size: 17,
-            color: "Silver"
+            color: "Silver",
+            price: 1100,
         },
         {
             id: 4,
             type: "Radial",
             size: 17,
-            color: "Black"
+            color: "Black",
+            price: 1100
         }
 
     ],
-    technologies: [{
+    techs: [{
         id: 1,
-        type: "Basic Package"
+        type: "Basic Package",
+        price: 500,
     },
     {
         id: 2,
-        type: "Navigation Package"
+        type: "Navigation Package",
+        price: 1200,
     },
     {
         id: 3,
-        type: "Visibility Package"
+        type: "Visibility Package",
+        price: 1400,
     },
     {
         id: 4,
-        type: "Ultra Package"
+        type: "Ultra Package",
+        price: 2200,
     }
 
     ],
     interiors: [{
         id: 1,
         color: "Beige",
-        type: "Fabric"
+        type: "Fabric",
+        price: 250
+
     },
     {
         id: 2,
         color: "Charcoal",
-        type: "Fabric"
+        type: "Fabric",
+        price: 250
     },
     {
         id: 3,
         color: "White",
-        type: "Leather"
+        type: "Leather",
+        price: 900
     },
     {
         id: 4,
         color: "Black",
-        type: "Leather"
+        type: "Leather",
+        price: 900,
     },
     ],
     paintColors: [
         {
             id: 1,
             color: "Silver",
+            price: 400,
         },
         {
             id: 2,
             color: "Midnight Blue",
+            price: 400,
         },
         {
             id: 3,
             color: "Firebrick Red",
+            price: 400,
         },
         {
             id: 4,
             color: "Spring Green",
+            price: 400,
         },
 
     ],
@@ -93,6 +111,7 @@ const database = {
         techId: 1,
         interiorId: 1,
         paintId: 1,
+        priceId: 1
     }]
 }
 
@@ -100,17 +119,18 @@ export const getInteriors = () => {
     return database.interiors.map(interior => ({ ...interior }))
 }
 export const getPaintColors = () => {
-    return database.paintColors.map(color => ({ ...color }))
+    return database.paintColors.map(paintColor => ({ ...paintColor }))
 }
 export const getWheels = () => {
     return database.wheels.map(wheel => ({ ...wheel }))
 }
-export const getTechnologies = () => {
-    return database.technologies.map(technology => ({ ...technology }))
+export const getTechs = () => {
+    return database.techs.map(tech => ({ ...tech }))
 }
-export const getOrders = () => {
-    return database.customOrders.map(order => ({ ...order }))
-}
+// export const getOrders = () => {
+//     return database.customOrders.map(order => ({ ...order }))
+// }
+
 export const setInterior = (id) => {
     database.orderBuilder.interiorId = id
 }
@@ -120,8 +140,8 @@ export const setPaintColor = (id) => {
 export const setWheel = (id) => {
     database.orderBuilder.wheelId = id
 }
-export const setTechnology = (id) => {
-    database.orderBuilder.technologyId = id
+export const setTech = (id) => {
+    database.orderBuilder.techId = id
 }
 export const addCustomOrder = () => {
     const newOrder = { ...database.orderBuilder }
@@ -133,6 +153,7 @@ export const addCustomOrder = () => {
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-export const getCustomOrders = (id) => {
-    database.orderBuilder.customOrdersid = id
+export const getCustomOrders = () => {
+    
+    return database.customOrders.map(order => ({ ...order }))
 }

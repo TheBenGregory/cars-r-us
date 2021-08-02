@@ -1,10 +1,10 @@
-import { getTechnologies, setTechnology } from "./database.js";
+import { getTechs, setTech } from "./database.js";
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "technology") {
-            setTechnology(parseInt(event.target.value))
+            setTech(parseInt(event.target.value))
         }
     }
 )
@@ -18,13 +18,13 @@ document.addEventListener(
 //         }
 //     }
 // )
-export const tech = getTechnologies()
+const tech = getTechs()
 
-export const Technologies = () => {
+export const Techs = () => {
     let html = "<ul>"
 
     const listItemsArray = tech.map(tech => {
-        return `<li><input type="radio" name="technology" value="${tech.id}"/> ${tech.type}
+        return `<li><input type="radio" name="tech" value="${tech.id}"/> ${tech.type}
         </li>`
     })
     
