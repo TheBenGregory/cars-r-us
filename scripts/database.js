@@ -108,6 +108,9 @@ export const getWheels = () => {
 export const getTechnologies = () => {
     return database.technologies.map(technology => ({ ...technology }))
 }
+export const getOrders = () => {
+    return database.customOrders.map(order => ({ ...order }))
+}
 export const setInterior = (id) => {
     database.orderBuilder.interiorId = id
 }
