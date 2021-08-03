@@ -9,7 +9,6 @@ document.addEventListener(
     }
 )
 
-export const interior = getInteriors()
 
 // document.addEventListener(
 //     "change",
@@ -21,6 +20,8 @@ export const interior = getInteriors()
 //         }
 //     }
 // )
+
+const interior = getInteriors()
 
 export const Interiors = () => {
     let html = "<ul>"
