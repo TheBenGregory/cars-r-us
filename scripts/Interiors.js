@@ -14,7 +14,7 @@ document.addEventListener(
 //     "change",
 //     (event) => {
 //         if (event.target.name === "interior") 
-                
+
 //         {
 //             window.alert(`Customer selected interior ${event.target.value}`)
 //         }
@@ -24,6 +24,8 @@ document.addEventListener(
 const interior = getInteriors()
 
 export const Interiors = () => {
+
+
     let html = "<ul>"
 
     const listItemsArray = interior.map(interior => {
@@ -31,8 +33,8 @@ export const Interiors = () => {
     
         </li>`
     })
-    
+
     html += listItemsArray.join("")
     html += "</ul>"
-    return html 
+    return html
 }

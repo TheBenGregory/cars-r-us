@@ -12,6 +12,8 @@ const buildOrderListItem = (order) => {
 
     const selectedInteriors = interiors.find(
         (interior) => {
+            console.log(interior)
+            console.log(order)
             return interior.id === order.interiorId
 
         }
@@ -35,9 +37,10 @@ const buildOrderListItem = (order) => {
             return wheel.id === order.wheelId
 
         }
-    )    
-
-    const totalCost = selectedInteriors.price + selectedTechs.price + selectedPaints.price + selectedWheels.price
+        )    
+        const totalCost = selectedInteriors.price + selectedTechs.price + selectedPaints.price + selectedWheels.price
+        console.log(selectedWheels)
+        console.log(selectedInteriors)
 
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",
