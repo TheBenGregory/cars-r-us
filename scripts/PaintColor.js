@@ -12,12 +12,13 @@ document.addEventListener(
 //     "change",
 //     (event) => {
 //         if (event.target.name === "color") 
-                
+
 //         {
 //             window.alert(`Customer selected color ${event.target.value}`)
 //         }
 //     }
 // )
+
 const paint = getPaints()
 
 export const Paint = () => {
@@ -27,8 +28,8 @@ export const Paint = () => {
         return `<li><input type="radio" name="paint" value="${paint.id}"/> ${paint.color}
         </li>`
     })
-    
+
     html += listItemsArray.join("")
     html += "</ul>"
-    return html 
+    return html
 }

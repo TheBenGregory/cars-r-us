@@ -4,6 +4,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "wheel") {
+            console.log(event.target.value)
             setWheel(parseInt(event.target.value))
         }
     }
@@ -18,9 +19,9 @@ document.addEventListener(
 //         }
 //     }
 // )
-const wheel = getWheels()
 
 export const Wheel = () => {
+    const wheel = getWheels()
     let html = "<ul>"
 
     const listItemsArray = wheel.map(wheel => {

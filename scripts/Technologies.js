@@ -3,7 +3,8 @@ import { getTechs, setTech } from "./database.js";
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "technology") {
+        if (event.target.name === "tech") {
+            console.log(event.target.value)
             setTech(parseInt(event.target.value))
         }
     }

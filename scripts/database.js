@@ -111,8 +111,8 @@ const database = {
         techId: 1,
         interiorId: 1,
         paintId: 1,
-        priceId: 1
-    }]
+        
+    }],
 }
 
 export const getInteriors = () => {
@@ -140,6 +140,7 @@ export const setWheel = (id) => {
 export const setTech = (id) => {
     database.orderBuilder.techId = id
 }
+
 export const addCustomOrder = () => {
     const newOrder = { ...database.orderBuilder }
     const lastIndex = database.customOrders.length - 1
