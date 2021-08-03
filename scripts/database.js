@@ -82,7 +82,7 @@ const database = {
         price: 900,
     },
     ],
-    paintColors: [
+    paints: [
         {
             id: 1,
             color: "Silver",
@@ -107,7 +107,7 @@ const database = {
     ],
     customOrders: [{
         id: 1,
-        wheelsId: 1,
+        wheelId: 1,
         techId: 1,
         interiorId: 1,
         paintId: 1,
@@ -118,8 +118,8 @@ const database = {
 export const getInteriors = () => {
     return database.interiors.map(interior => ({ ...interior }))
 }
-export const getPaintColors = () => {
-    return database.paintColors.map(paintColor => ({ ...paintColor }))
+export const getPaints = () => {
+    return database.paints.map(paint => ({ ...paint }))
 }
 export const getWheels = () => {
     return database.wheels.map(wheel => ({ ...wheel }))
@@ -127,15 +127,12 @@ export const getWheels = () => {
 export const getTechs = () => {
     return database.techs.map(tech => ({ ...tech }))
 }
-// export const getOrders = () => {
-//     return database.customOrders.map(order => ({ ...order }))
-// }
 
 export const setInterior = (id) => {
     database.orderBuilder.interiorId = id
 }
-export const setPaintColor = (id) => {
-    database.orderBuilder.paintColorId = id
+export const setPaint = (id) => {
+    database.orderBuilder.paintId = id
 }
 export const setWheel = (id) => {
     database.orderBuilder.wheelId = id

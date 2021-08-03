@@ -8,7 +8,6 @@ document.addEventListener(
         }
     }
 )
-
 // document.addEventListener(
 //     "change",
 //     (event) => {
@@ -19,10 +18,9 @@ document.addEventListener(
 //         }
 //     }
 // )
+const wheel = getWheels()
 
-export const wheel = getWheels()
-
-export const Wheels = () => {
+export const Wheel = () => {
     let html = "<ul>"
 
     const listItemsArray = wheel.map(wheel => {

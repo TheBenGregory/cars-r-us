@@ -1,7 +1,7 @@
 import { Interiors } from "./Interiors.js"
-import { PaintColor } from "./PaintColor.js"
+import { Paint } from "./PaintColor.js"
 import { Techs } from "./Technologies.js"
-import { Wheels } from "./Wheels.js"
+import { Wheel } from "./Wheels.js"
 import { Orders } from "./Orders.js"
 import { addCustomOrder } from "./database.js"
 
@@ -21,7 +21,7 @@ export const CarsRUs = () => {
         <article class="choices">
             <section class="choices__wheels options">
                 <h2>Wheels</h2>
-                ${Wheels()}
+                ${Wheel()}
             </section>
             <section class="choices__tech options">
                 <h2>Technology</h2>
@@ -33,7 +33,7 @@ export const CarsRUs = () => {
             </section>
             <section class="choices__color options">
             <h2>Color</h2>
-            ${PaintColor()}
+            ${Paint()}
         </section>
         </article>
 
