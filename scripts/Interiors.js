@@ -21,9 +21,9 @@ document.addEventListener(
 //     }
 // )
 
-const interior = getInteriors()
 
 export const Interiors = () => {
+    const interior = getInteriors()
 
 
     let html = "<ul>"

@@ -12,8 +12,6 @@ const buildOrderListItem = (order) => {
 
     const selectedInteriors = interiors.find(
         (interior) => {
-            console.log(interior)
-            console.log(order)
             return interior.id === order.interiorId
 
         }

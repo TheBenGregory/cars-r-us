@@ -4,7 +4,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "tech") {
-            console.log(event.target.value)
+            
             setTech(parseInt(event.target.value))
         }
     }
@@ -19,9 +19,9 @@ document.addEventListener(
 //         }
 //     }
 // )
-const tech = getTechs()
 
 export const Techs = () => {
+    const tech = getTechs()
     let html = "<ul>"
 
     const listItemsArray = tech.map(tech => {

@@ -4,7 +4,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "wheel") {
-            console.log(event.target.value)
+            
             setWheel(parseInt(event.target.value))
         }
     }
