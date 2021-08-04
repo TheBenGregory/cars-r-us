@@ -19,9 +19,9 @@ document.addEventListener(
 //     }
 // )
 
-const paint = getPaints()
 
 export const Paint = () => {
+    const paint = getPaints()
     let html = "<ul>"
 
     const listItemsArray = paint.map(paint => {

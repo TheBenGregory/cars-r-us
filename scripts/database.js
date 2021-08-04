@@ -142,6 +142,9 @@ export const setTech = (id) => {
 }
 
 export const addCustomOrder = () => {
+    
+    if ( database.orderBuilder.id === database.customOrders.hasOwnProperty(price)
+    ) return
     const newOrder = { ...database.orderBuilder }
     const lastIndex = database.customOrders.length - 1
     newOrder.id = database.customOrders[lastIndex].id + 1
@@ -155,3 +158,4 @@ export const getCustomOrders = () => {
     
     return database.customOrders.map(order => ({ ...order }))
 }
+
